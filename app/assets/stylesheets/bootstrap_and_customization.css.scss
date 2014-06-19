@@ -1,0 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg:                       #ecf0f1;
+$navbar-default-bg:             #2c3e50;
+$navbar-default-link-color:     #ecf0f1;
+$brand-primary:                 #f39c12;
+$jumbotron-color:               #ecf0f1;
+$font-family-sans-serif:        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                 45px;
+
+@import 'bootstrap';
+
+.jumbotron {
+  background-image: url('http://photo.elsoar.com/wp-content/images/two-friends-are-focused-on-playing-video-games-on-gray-.jpg');
+  height: 450px;
+  padding-top: 50px;
+}
+
+.lower-link {
+  margin: 70px 0px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #f39c12;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #f39c12;
+}
