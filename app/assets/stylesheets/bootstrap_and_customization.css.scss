@@ -14,14 +14,10 @@ $navbar-height:                 45px;
   background-image: url('http://photo.elsoar.com/wp-content/images/two-friends-are-focused-on-playing-video-games-on-gray-.jpg');
   height: 450px;
   padding-top: 50px;
-  margin: -10px 0px 0px;
-  /* padding-top: 50px;
-  This was done because of the space between navbar and jumbotron, but
-  the navbar was set to fixed top, which was removed because it was
-  messing up all of the non-home pages
-  margin: -35px 0px 0px; 
-  This was done because of space between navbar and jumbotron, but
-  it messes with the flash notices because of the negative margin */
+  margin: -20px 0px 0px;
+  /*
+  This was done because of space between navbar and jumbotron 
+  */
 }
 
 .lower-link {
@@ -39,7 +35,11 @@ $navbar-height:                 45px;
 .navbar {
   margin-bottom: 0px;
   border-radius: 0px;
+  /*
+  This was done because of space between navbar and jumbotron 
+  */
 }
+
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
