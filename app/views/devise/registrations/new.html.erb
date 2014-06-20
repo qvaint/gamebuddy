@@ -18,6 +18,11 @@
       </div>
 
       <div class="form-group">
+        <%= f.label :age %> 
+        <%= f.number_field :age, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
         <%= f.submit "Sign up", class: "btn btn-primary" %>
       </div>
     <% end %>
