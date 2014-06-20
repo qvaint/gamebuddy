@@ -12,6 +12,9 @@ protected
 
    devise_parameter_sanitizer.for(:sign_up) << :casual
    devise_parameter_sanitizer.for(:account_update) << :casual
+
+   devise_parameter_sanitizer.for(:sign_up) << :competitive
+   devise_parameter_sanitizer.for(:account_update) << :competitive
  end
 
 end
