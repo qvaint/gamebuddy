@@ -22,27 +22,26 @@ class ProfilesController < ApplicationController
   # POST /profiles
   def create
     @profile = Profile.new(profile_params)
-      if @profile.save
-        redirect_to @profile, notice: 'Profile was successfully created.'
-      else
-        render action :new
-      end
+    if @profile.save
+      redirect_to @profile, notice: 'Profile was successfully created.'
+    else
+      render action :new
     end
+  end
 
   # PATCH/PUT /profiles/1
   def update
-      if @profile.update(profile_params)
-        redirect_to @profile, notice: 'Profile was successfully updated.'
-      else
-        render action :edit
-      end
+    if @profile.update(profile_params)
+      redirect_to @profile, notice: 'Profile was successfully updated.'
+    else
+      render action :edit
     end
+  end
 
   # DELETE /profiles/1
   def destroy
     @profile.destroy
       redirect_to profiles_url, notice: 'Profile was successfully destroyed.'
-    end
   end
 
   private
