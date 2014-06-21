@@ -21,14 +21,14 @@
       <div class="form-group">
         <span>
           <%= f.label "Gaming Attitude" %>
-          <i> (select one or both)</i>
+          <i> (select as many as you want)</i>
         </span>
         <br />
-        <label class="btn btn-primary">
+        <label class="btn btn-success">
           <%= f.label :casual %>
           <%= f.check_box :casual %> 
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-success">
           <%= f.label :competitive %>
           <%= f.check_box :competitive %> 
         </label>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.submit "Update", class: "btn btn-primary" %>
+        <%= f.submit "Update", class: "btn btn-lg btn-primary" %>
       </div>
     <% end %>
   </div>
