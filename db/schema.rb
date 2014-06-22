@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622145417) do
+ActiveRecord::Schema.define(version: 20140622152425) do
 
   create_table "aliases", force: true do |t|
     t.string   "description"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 20140622145417) do
     t.string   "XBLDescription"
     t.boolean  "XBone"
     t.boolean  "X360"
+    t.integer  "PSN"
+    t.string   "PSNName"
+    t.string   "PSNDescription"
+    t.boolean  "PS3"
+    t.boolean  "PS4"
+    t.boolean  "Vita"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"

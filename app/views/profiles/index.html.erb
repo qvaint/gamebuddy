@@ -11,6 +11,12 @@
       <th>XBLDescription?</th>
       <th>XBone?</th>
       <th>X360?</th>
+      <th>PSN?</th>
+      <th>PSNName?</th>
+      <th>PSNDescription?</th>
+      <th>PS3</th>
+      <th>PS4?</th>
+      <th>Vita?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +32,12 @@
         <td><%= profile.XBLDescription %></td>
         <td><%= profile.XBone %></td>
         <td><%= profile.X360 %></td>
+        <td><%= profile.PSN %></td>
+        <td><%= profile.PSNName %></td>
+        <td><%= profile.PSNDescription %></td>
+        <td><%= profile.PS3 %></td>
+        <td><%= profile.PS4 %></td>
+        <td><%= profile.Vita %></td>
         <td><%= link_to 'Show', profile %></td>
         
         <% if current_user && profile.user == current_user %>

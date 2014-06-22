@@ -60,6 +60,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:description, :XBL, :Gamertag, :XBLDescription, :XBone, :X360)
+      params.require(:profile).permit(:description, :XBL, :Gamertag, :XBLDescription, :XBone, :X360, :PSN, :PSNName, :PSNDescription, :PS3, :PS4, :Vita)
     end
 end
