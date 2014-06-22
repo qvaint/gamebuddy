@@ -4,6 +4,9 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>Age</th>
+      <th>Casual</th>
+      <th>Competitive</th>
       <th>User ID</th>
       <th>Email</th>
       <th>XBL?</th>
@@ -17,6 +20,10 @@
       <th>PS3</th>
       <th>PS4?</th>
       <th>Vita?</th>
+      <th>Steam</th>
+      <th>SteamName?</th>
+      <th>SteamDescription?</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,6 +32,9 @@
     <% @profiles.each do |profile| %>
       <tr>
         <td><%= profile.description %></td>
+        <td><%= profile.user.age %></td>
+        <td><%= profile.user.casual %></td>
+        <td><%= profile.user.competitive %></td>
         <td><%= profile.user.id %></td>
         <td><%= profile.user.email if profile.user %></td>
         <td><%= profile.XBL %></td>
@@ -38,6 +48,9 @@
         <td><%= profile.PS3 %></td>
         <td><%= profile.PS4 %></td>
         <td><%= profile.Vita %></td>
+        <td><%= profile.steam %></td>
+        <td><%= profile.steamName %></td>
+        <td><%= profile.steamDescription %></td>
         <td><%= link_to 'Show', profile %></td>
         
         <% if current_user && profile.user == current_user %>

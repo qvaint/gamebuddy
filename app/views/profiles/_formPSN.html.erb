@@ -1,0 +1,51 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %> <!-- profile errors any -->
+
+
+  <div class="form-group">
+    <%= f.label :PSN %>
+    <%= f.number_field :PSN, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :PSNName %>
+    <%= f.text_field :PSNName, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :PSNDescription %>
+    <%= f.text_field :PSNDescription, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <span>
+      <i> (which do you have)</i>
+    </span>
+    <br />
+    <label class="btn btn-success">
+      <%= f.label :PS3 %>
+      <%= f.check_box :PS3 %> 
+    </label>
+    <label class="btn btn-success">
+      <%= f.label :PS4 %>
+      <%= f.check_box :PS4 %> 
+    </label>
+    <label class="btn btn-success">
+      <%= f.label :Vita %>
+      <%= f.check_box :Vita %> 
+    </label>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary btn-lg" %>
+  </div>
+
+<% end %>

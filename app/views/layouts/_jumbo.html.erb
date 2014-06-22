@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h1>Make new online gaming friends!</h1>
+  <% if user_signed_in? %>
+          # YAAH SIGNED IN
+     <% else %>
+       <div class="lower-link">
+        <%= link_to "Get Started Here", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+      </div>
+  <% end %>   
+</div>

@@ -11,17 +11,24 @@
     </div>
   <% end %> <!-- profile errors any -->
 
-  
-  <%= render partial: 'formXBL' %>
 
+  <div class="form-group">
+    <%= f.label :steam %>
+    <%= f.number_field :steam, class: "form-control" %>
+  </div>
 
-
-
-
+  <div class="form-group">
+    <%= f.label :steamName %>
+    <%= f.text_field :steamName, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :steamDescription %>
+    <%= f.text_field :steamDescription, class: "form-control" %>
+  </div>
+ 
 
   <div class="form-group">
     <%= f.submit class: "btn btn-primary btn-lg" %>
   </div>
 
 <% end %>
-

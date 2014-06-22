@@ -8,14 +8,20 @@ $jumbotron-color:               #ecf0f1;
 $font-family-sans-serif:        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                 45px;
 
+
 @import 'bootstrap';
+
+body {
+  padding-top: 45px;
+}
 
 .jumbotron {
   background-image: url('http://photo.elsoar.com/wp-content/images/two-friends-are-focused-on-playing-video-games-on-gray-.jpg');
   height: 450px;
+  /*
   padding-top: 50px;
   margin: -20px 0px 0px;
-  /*
+  
   This was done because of space between navbar and jumbotron 
   */
 }
@@ -49,7 +55,3 @@ $navbar-height:                 45px;
 .navbar-default .navbar-nav > li > a:focus {
     color: #f39c12;
 }
-
-
-
-
