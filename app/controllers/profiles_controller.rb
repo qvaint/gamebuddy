@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /profiles
   def index
@@ -12,7 +13,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-    @profile = Profile.new
+    @profile = current_user.profiles.build
   end
 
   # GET /profiles/1/edit
@@ -21,7 +22,7 @@ class ProfilesController < ApplicationController
 
   # POST /profiles
   def create
-    @profile = Profile.new(profile_params)
+    @profile = current_user.profiles.build(profile_params)
     if @profile.save
       redirect_to @profile, notice: 'Profile was successfully created.'
     else
@@ -48,6 +49,11 @@ class ProfilesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
       @profile = Profile.find(params[:id])
+    end
+
+    def correct_user
+      @profile = current_user.profiles.find_by(id: params[:id])
+      redirect_to profiles_path, notice: "You are not authorized to edit this profile" if @profile.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

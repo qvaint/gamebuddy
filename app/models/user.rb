@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   validates_inclusion_of :age, :in => 0..99
   
+  has_many :profiles
 
 end
