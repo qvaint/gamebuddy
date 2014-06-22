@@ -6,6 +6,11 @@
       <th>Description</th>
       <th>User ID</th>
       <th>Email</th>
+      <th>XBL?</th>
+      <th>Gamertag?</th>
+      <th>XBLDescription?</th>
+      <th>XBone?</th>
+      <th>X360?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +21,17 @@
         <td><%= profile.description %></td>
         <td><%= profile.user.id %></td>
         <td><%= profile.user.email if profile.user %></td>
+        <td><%= profile.XBL %></td>
+        <td><%= profile.Gamertag %></td>
+        <td><%= profile.XBLDescription %></td>
+        <td><%= profile.XBone %></td>
+        <td><%= profile.X360 %></td>
         <td><%= link_to 'Show', profile %></td>
+        
+        <% if current_user && profile.user == current_user %>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
