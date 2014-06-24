@@ -11,42 +11,38 @@
     </div>
   <% end %> <!-- profile errors any -->
 
+  <%= f.number_field :XBL, :value => 1, class: "hidden" %>
 
   <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :XBL %>
-    <%= f.number_field :XBL, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :Gamertag %>
+    <%= f.label :Gamertag, "What's your XBL Gamertag?" %>
     <%= f.text_field :Gamertag, class: "form-control" %>
   </div>
+  <br />
   <div class="form-group">
-    <%= f.label :XBLDescription %>
+    <%= f.label :XBLDescription, "Anything you want to add to your profile?" %>
     <%= f.text_field :XBLDescription, class: "form-control" %>
+    <i> (games you want to play, if you have a microphone, times you like to play, etc.)</i>
   </div>
+  <br />
 
   <div class="form-group">
-        <span>
-          <i> (which do you have)</i>
-        </span>
-        <br />
-        <label class="btn btn-success">
-          <%= f.label :XBone %>
-          <%= f.check_box :XBone %> 
-        </label>
-        <label class="btn btn-success">
-          <%= f.label :X360 %>
-          <%= f.check_box :X360 %> 
-        </label>
+    <%= f.label :XBLDescription, "What systems do you play on?" %>
+      <br />
+      <label class="btn btn-success">
+        <%= f.label :XBone, "Xbox One" %>
+        <%= f.check_box :XBone %> 
+      </label>
+      <label class="btn btn-success">
+        <%= f.label :X360, "Xbox 360" %>
+        <%= f.check_box :X360 %> 
+      </label>
+    <br />
+    <br />
   </div>
 
-  <div class="form-group">
-    <%= f.submit class: "btn btn-primary btn-lg" %>
+  <div class="panel-footer center">
+    <div class="form-group">
+      <%= f.submit class: "btn btn-primary btn-lg" %>
+    </div>
   </div>
-
 <% end %>

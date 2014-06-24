@@ -11,41 +11,41 @@
     </div>
   <% end %> <!-- profile errors any -->
 
+  <%= f.number_field :PSN, :value => 1, class: "hidden" %>
 
   <div class="form-group">
-    <%= f.label :PSN %>
-    <%= f.number_field :PSN, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :PSNName %>
+    <%= f.label :PSNName, "What's your PSN name?" %>
     <%= f.text_field :PSNName, class: "form-control" %>
   </div>
+  <br />
   <div class="form-group">
-    <%= f.label :PSNDescription %>
+    <%= f.label :PSNDescription, "Anything you want to add to your profile?" %>
     <%= f.text_field :PSNDescription, class: "form-control" %>
+    <i> (games you want to play, if you have a microphone, times you like to play, etc.)</i>
   </div>
-
+  <br />
   <div class="form-group">
-    <span>
-      <i> (which do you have)</i>
-    </span>
+    <%= f.label :PSNDescription, "What systems do you play on?" %>
     <br />
     <label class="btn btn-success">
-      <%= f.label :PS3 %>
+      <%= f.label :PS3, "PS3" %>
       <%= f.check_box :PS3 %> 
     </label>
     <label class="btn btn-success">
-      <%= f.label :PS4 %>
+      <%= f.label :PS4, "PS4" %>
       <%= f.check_box :PS4 %> 
     </label>
     <label class="btn btn-success">
-      <%= f.label :Vita %>
+      <%= f.label :Vita, "PS Vita" %>
       <%= f.check_box :Vita %> 
     </label>
+    <br />
+    <br />
   </div>
-
-  <div class="form-group">
-    <%= f.submit class: "btn btn-primary btn-lg" %>
+  <div class="panel-footer center">
+    <div class="form-group">
+      <%= f.submit class: "btn btn-primary btn-lg" %>
+    </div>
   </div>
 
 <% end %>

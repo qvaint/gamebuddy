@@ -10,13 +10,14 @@
 <body>
 
   <%= render 'layouts/header' %>
+  <% flash.each do |name, msg| %>
+     <%= content_tag(:div, msg, class: "alert alert-info margin-0") %>
+  <% end %>
   <% if current_page?(root_url) && user_signed_in? == false %>
     <%= render 'layouts/jumbo' %>
   <% end %>
   <div class="container">
-    <% flash.each do |name, msg| %>
-       <%= content_tag(:div, msg, class: "alert alert-info") %>
-    <% end %>
+    
     <%= yield %>
   </div>
 </body>
